@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "pantalon",
+    "brand": "dior",
+    "size": "XL",
+    "amount": 6000
+  },
+  {
+    "id": 2,
+    "name": "T-shirt",
+    "brand": "adidas",
+    "size": "L",
+    "amount": 5000
+  }
+]
