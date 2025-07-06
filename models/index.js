@@ -40,4 +40,16 @@ Object.keys(db).forEach(modelName => {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
+// importation des modeles
+
+db.Categorie = require('.categorie')(sequelize, Sequelize.DataTypes);
+db.Chant = require('.chant')(sequelize, Sequelize.DataTypes);
+
+//Definition des associations
+
+Object.values(db)
+  .filter(model => typeof model.associate === 'function')
+  .forEach(model => model.associate(db));
+
+
 module.exports = db;
