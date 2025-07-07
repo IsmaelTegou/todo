@@ -11,6 +11,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api/articles", articleRoutes);
 app.use('/api/chants', chantRoutes);
 app.use('/api/categories', categorieRoutes);
+app.use('/uploads', express.static('uploads'));
+
 
 const PORT = process.env.PORT || 3000;
 sequelize.sync().then(() => {
